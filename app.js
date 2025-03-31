@@ -44,44 +44,65 @@ bot.on("callback_query", async (callback_query) => {
     if(data == 'industry_ai'){
         bot.sendMessage(chatid,"You have selected AI as your Startup")
 
-        bot.sendMessage(chatid,"Select Your Startup Name to Initiate your Startup",{
+        const AInames = [
+            'NeuraNext',
+            'Cogniflow AI',
+            'SynthMind',
+            'QuantumPulse',
+            'VisionaryAI'
+        ]
 
+        const randomname = AInames[Math.floor(Math.random() * AInames.length)]
+
+        bot.sendMessage(chatid,`You AI Startup's Name is  **${randomname}**`)
+
+        bot.sendMessage(chatid,`${randomname} Select Your Funding Source to KickStart your Journey`,{
             reply_markup:{
                 inline_keyboard: [
-                    [{ text: "NeuraNext", callback_data: "Nueral_data"}],
-                    [{ text: "Cogniflow AI ", callback_data: "Cogniflow_data"}],
-                    [{ text: "SynthMind ", callback_data: "SythMind_data"}],
-                    [{ text: "QuantumPulse", callback_data: "QuantumPulse_data"}],
-                    [{ text: "VisionaryAI ", callback_data: "Visionary_data"}],
+                    [{ text: `  BootStrapped | Capital $35K | Equity Loss 0% | Risk Level Low  ` , callback_data: "callback_boot" }],
+                    [{ text: `  Angel Investor | Capital $150K | Equity Loss 15% | Risk Level Medium  ` , callback_data: "callback_angel"  }],
+                    [{ text: `  Venture Capital | Capital $700K | Equity Loss 40% | Risk Level High  ` , callback_data: "callback_venture"  }],
                 ]
             }
         })
+    }
+    
 
-
-        bot.on("callback_query", async (callbackQuery) => {
-            const chatid = await callbackQuery.message.chat.id;
-            const neudat = callbackQuery.data;
-
-            // console.log(chatid,"Received callback data:", neudat);
-
-
-        if(neudat == 'Neural_data'){
-            bot.sendMessage(chatid,"Your Startup Name is NeuraNext")
-        }
-        }) 
-   
-
-   
-
-        
-
-
-    }else if(data == 'industry_web'){
-        bot.sendMessage(chatid,"You have selected Web Development as your Startup")
+  
+    
+    else if(data == 'industry_web'){
+        bot.sendMessage(chatid,"You have selected Web Development as your Startup But The Web Development is Still in Development")
     }else if(data == 'industry_mern'){
-        bot.sendMessage(chatid,"You have selected MERN Stack as your Startup")
+        bot.sendMessage(chatid,"You have selected MERN Stack as your Startup But The MERN Stack is Still in Development")
     }
 })
+
+
+
+
+bot.on("callback_query",async (callbackQuery) => {
+    const chatid = callbackQuery.message.chat.id;
+    const funddata = callbackQuery.data;
+    
+
+    if(funddata == 'callback_boot'){
+        bot.sendMessage(chatid,`🎉 Congratulations! You’ve secured $35K in Bootstrapped Funding! \n \n💡 With 0% equity loss, you have full control over your startup’s vision \n \n  Strategize wisely, invest in growth, and build your path to success!`)
+    }else if(funddata == 'callback_angel'){
+        bot.sendMessage(chatid,`🎉 Great Move! You’ve secured $150K from an Angel Investor! 💰🚀 \n \n 
+🔄 In exchange, you’ve given up 15% equity, but with the right strategy, this capital can fuel your startup’s growth. \n\n Use your funding wisely to expand, innovate, and gain market traction while keeping your investor happy!`)
+    }else if(funddata == 'callback_venture'){
+        bot.sendMessage(chatid,`💰 Massive Investment Secured! You’ve landed $700K in Venture Capital funding! 🚀 \n\n 🔥 High risk, high reward! In return, you've given up 40% equity, meaning investors now have a big say in your startup's direction. \n\n Scale aggressively, dominate the market, and make strategic moves to turn this investment into a game-changing success!`)
+    }else{
+        bot.sendMessage("Wrong Options")
+    }
+})
+
+
+
+
+
+
+
  
 
 
