@@ -143,7 +143,7 @@ bot.on("callback_query", async (callbackQuery) => {
 
 
         bot.sendMessage(chatid, "You've successfully hired an AI Developer for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring AI developer is $20K Use it wisely")
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring AI developer is $20K Use it wisely New Features Are in development")
 
 
     } else if (teamdata == 'callback_sci') {
@@ -151,131 +151,131 @@ bot.on("callback_query", async (callbackQuery) => {
 
 
         bot.sendMessage(chatid, "You've successfully hired an Data Scientist for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $23K Use it wisely")
-    } else if (teamdata == 'callback_design') {
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $23K Use it wisely New Features Are in development")
+    } else if (teamdata == 'callback_design') { 
 
 
         bot.sendMessage(chatid, "You've successfully hired an AI Designer for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $27K Use it wisely")
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $27K Use it wisely New Features Are in development")
     } else if (teamdata == 'callback_special') {
 
 
         bot.sendMessage(chatid, "You've successfully hired an Marketing Specialist for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $29K Use it wisely")
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $29K Use it wisely New Features Are in development")
     } else if (teamdata == 'callback_manager') {
 
 
         bot.sendMessage(chatid, "You've successfully hired an Product Manager for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $25K Use it wisely")
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $25K Use it wisely New Features Are in development")
     } else if (teamdata == 'callback_stategy') {
 
 
         bot.sendMessage(chatid, "You've successfully hired an Business Strategist for your product development—an excellent decision! Now, it's time to move forward and start building your AI product.")
-        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $30K Use it wisely")
+        bot.sendMessage(chatid, "Your Remaining Capital After Hiring Data Scientist is $30K Use it wisely New Features Are in development")
     }
 
 })
 
 
 
-bot.on("callback_query", async (callbackQuery) => {
-    const chatid = callbackQuery.message.chat.id;
-    const hirestartdata  = callbackQuery.data;
+// bot.on("callback_query", async (callbackQuery) => {
+//     const chatid = callbackQuery.message.chat.id;
+//     const hirestartdata  = callbackQuery.data;
 
 
  
 
-    const ai = [
-       " AI Chatbot",
-       " AI Voice Assistant",
-        "AI Virtual Agent",
-       " AI Customer Support Bot",
-       "AI Image Generator",
-       "AI Art Creator",
-       "AI Video Enhancer",
-       "AI Face Animator",
-       "AI Code Assistant",
-       "AI Bug Fixer",
-      " AI Code Generator",
-       "AI DevOps Automator",
-       "AI Content Generator",
-       "AI Blog Writer",
-       "AI Grammar Checker",
-       "AI Summarizer",
-       "AI Task Automator",
+//     const ai = [
+//        " AI Chatbot",
+//        " AI Voice Assistant",
+//         "AI Virtual Agent",
+//        " AI Customer Support Bot",
+//        "AI Image Generator",
+//        "AI Art Creator",
+//        "AI Video Enhancer",
+//        "AI Face Animator",
+//        "AI Code Assistant",
+//        "AI Bug Fixer",
+//       " AI Code Generator",
+//        "AI DevOps Automator",
+//        "AI Content Generator",
+//        "AI Blog Writer",
+//        "AI Grammar Checker",
+//        "AI Summarizer",
+//        "AI Task Automator",
 
-"AI Document Scanner",
+// "AI Document Scanner",
 
-"AI Email Assistant",
+// "AI Email Assistant",
 
-"AI Workflow Optimizer",
+// "AI Workflow Optimizer",
 
-"AI Ad Copywriter",
+// "AI Ad Copywriter",
 
-"AI SEO Optimizer",
+// "AI SEO Optimizer",
 
-"AI Social Media Planner",
+// "AI Social Media Planner",
 
-"AI Growth Hacker",
+// "AI Growth Hacker",
 
-"AI Stock Predictor",
+// "AI Stock Predictor",
 
-"AI Investment Advisor",
+// "AI Investment Advisor",
 
-"AI Crypto Bot",
+// "AI Crypto Bot",
 
-"AI Risk Analyzer",
-"AI Disease Predictor",
+// "AI Risk Analyzer",
+// "AI Disease Predictor",
 
-"AI Medical Assistant",
+// "AI Medical Assistant",
 
-"AI Mental Health Chatbot",
+// "AI Mental Health Chatbot",
 
-"AI Diet & Fitness Coach",
+// "AI Diet & Fitness Coach",
 
-"AI Tutoring Assistant",
+// "AI Tutoring Assistant",
 
-"AI Language Translator",
+// "AI Language Translator",
 
-"AI Exam Helper",
+// "AI Exam Helper",
 
-"AI Knowledge Engine",
+// "AI Knowledge Engine",
 
 
-"AI Fraud Detector",
+// "AI Fraud Detector",
 
-"AI Password Manager",
+// "AI Password Manager",
 
-"AI Phishing Blocker",
+// "AI Phishing Blocker",
 
-"AI Threat Scanner",
-    ]
+// "AI Threat Scanner",
+//     ]
     
 
     
 
-    bot.sendMessage(chatid, `Select Your Product Name to Start your Developement with your Team`, {
-        reply_markup: {
-            inline_keyboard: [
-                [{ text:  faker.helpers.arrayElement(ai) , callback_data: "callback_ainame" }],
-                [{ text: "Get a New Name" , callback_data: "callback_randomname" }]
-            ]
-        }
-    })
-})
+//     bot.sendMessage(chatid, `Select Your Product Name to Start your Developement with your Team`, {
+//         reply_markup: {
+//             inline_keyboard: [
+//                 [{ text:  faker.helpers.arrayElement(ai) , callback_data: "callback_ainame" }],
+//                 [{ text: "Get a New Name" , callback_data: "callback_randomname" }]
+//             ]
+//         }
+//     })
+// })
 
 
-bot.on("callback_query", async (callbackQuery) => {
-    const chatid = callbackQuery.message.chat.id;
+// bot.on("callback_query", async (callbackQuery) => {
+//     const chatid = callbackQuery.message.chat.id;
 
-    const ai = callbackQuery.data;
+//     const ai = callbackQuery.data;
 
-    if(ai == 'callback_ainame'){
-        bot.sendMessage(chatid,"Currently this feature in development phase stary curious to know Callback_ainame for remember or testing!")
-    }else if(ai == 'callback_randomname'){
-        bot.sendMessage(chatid,"Currently this feature in development phase stary curious to know randomname for remember or testing!!")
-    }
-})
+//     if(ai == 'callback_ainame'){
+//         bot.sendMessage(chatid,"Currently this feature in development phase stary curious to know Callback_ainame for remember or testing!")
+//     }else if(ai == 'callback_randomname'){
+//         bot.sendMessage(chatid,"Currently this feature in development phase stary curious to know randomname for remember or testing!!")
+//     }
+// })
 
 
 
