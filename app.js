@@ -87,9 +87,10 @@ bot.on("callback_query", async (callback_query) => {
 bot.on("callback_query", async (callbackQuery) => {
     const chatid = callbackQuery.message.chat.id;
     const funddata = callbackQuery.data;
-    // const messageid = callbackQuery.message.message_id;
+    
+    const messageid = callbackQuery.message.message_id;
 
-    // await bot.deleteMessage(chatid,messageid)
+    await bot.deleteMessage(chatid,messageid)
 
 
     if (funddata == 'callback_boot') {
