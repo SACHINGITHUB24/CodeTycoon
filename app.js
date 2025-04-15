@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api')
 const tgfancy = require('tgfancy')
 const { faker } = require('@faker-js/faker')
 
-const token = '7816999186:AAE2z2V_KXMI1RcTOnpYXItr_ylvMc-kpes'
+const token = '7816999186:AAF_DXqclCK8H9iJju6LO19z07GkjBFzlv0'
 
 
 const bot = new tgfancy(token, {
